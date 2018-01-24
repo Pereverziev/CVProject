@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="defaultLayout" template="/WEB-INF/tiles/defaultLayout.jsp">
+        <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
+    </definition>
+
+    <definition name="registration" extends="defaultLayout" template="/WEB-INF/pages/registration.jsp"/>
+
+    <definition name="account" extends="defaultLayout" template="/WEB-INF/pages/account.jsp"/>
+
+    <definition name="login" extends="defaultLayout" template="/WEB-INF/pages/login.jsp"/>
+
+    <definition name="restorePassword" extends="defaultLayout" template="/WEB-INF/pages/restorePassword.jsp"/>
+
+    <definition name="restorePasswordLink" extends="defaultLayout" template="/WEB-INF/pages/restorePasswordLink.jsp"/>
+
+    <definition name="successRegistration" extends="defaultLayout" template="/WEB-INF/pages/successRegistration.jsp"/>
+
+    <definition name="about" extends="defaultLayout" template="/WEB-INF/pages/about.jsp"/>
+
+    <definition name="changePassword" extends="defaultLayout" template="/WEB-INF/pages/changePassword.jsp"/>
+
+    <definition name="notFoundErrorPage" extends="defaultLayout" template="/WEB-INF/pages/notFoundErrorPage.jsp"/>
+
+    <definition name="restorePasswordInformPage" extends="defaultLayout" template="/WEB-INF/pages/restorePasswordInformPage.jsp"/>
+
+
+</tiles-definitions>
