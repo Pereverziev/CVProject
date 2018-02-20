@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<a href="/about">About</a>   <a href="/logout">Logout</a>
+<a href="/logout">Logout</a>
 
 </body>
 </html>

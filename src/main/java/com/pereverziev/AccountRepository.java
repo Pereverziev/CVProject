@@ -23,7 +23,7 @@ public class AccountRepository {
         jdbcTemplate.execute("INSERT INTO users(login,password,enabled,role,email,confirmid) VALUES ('" + account.getLogin() + "','"
                 + account.getPassword() + "','f','USER','" + account.getEmail() + "','" + confirmId + "')");
         mailMail.sendEmail(confirmId, account.getEmail(), "Confirm your email address.",
-                "Hi, your link to confirm your Facebook2 account here: localhost:8080/confirm?id=" + confirmId);
+                "Hi, your link to confirm your account: localhost:8080/confirm?id=" + confirmId);
     }
 
     void confirmAccount(String id) {
@@ -33,8 +33,8 @@ public class AccountRepository {
     void restoreAccountPassword(String email) {
         UUID uuid = UUID.randomUUID();
         jdbcTemplate.execute("UPDATE users SET respassid = '" + uuid + "' WHERE email = '" + email + "'");
-        mailMail.sendEmail(uuid.toString(), email, "Restore password to your facebook2 account.",
-                "Hi, your link to restore your Facebook2 account here: localhost:8080/restorePasswordLink?id=" + uuid.toString());
+        mailMail.sendEmail(uuid.toString(), email, "Restore password to your account.",
+                "Hi, your link to restore your account: localhost:8080/restorePasswordLink?id=" + uuid.toString());
     }
 
     void setNewPasswordForAccountByResPassId(String password, String id) {

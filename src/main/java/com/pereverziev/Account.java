@@ -5,10 +5,10 @@ import javax.validation.constraints.Size;
 
 public class Account {
 
-    @Size(min = 5, max = 10, message = "Login must be 5 - 10 length")
+    @Size(min = 5, max = 10, message = "Login must be 5 - 10 in length")
     private String login;
 
-    @Size(min = 8, max = 20, message = "Password must be 8 - 20 length")
+    @Size(min = 8, max = 20, message = "Password must be 8 - 20 in length")
     private String password;
 
     @Size(min = 5, max = 50, message = "Wrong email")
@@ -46,10 +46,10 @@ public class Account {
 
 class RestorePasswordPOJO {
 
-    @Size(min = 8, max = 20, message = "Min length is 8")
+    @Size(min = 8, max = 20, message = "Min length - 8, max - 20")
     private String password1;
 
-    @Size(min = 8, max = 20, message = "Min length is 8")
+    @Size(min = 8, max = 20, message = "Min length - 8, max - 20")
     private String password2;
 
     public String getPassword1() {
@@ -79,10 +79,10 @@ class ChangePasswordPOJO {
 
     private String currentPassword;
 
-    @Size(min = 8,max = 20,message = "Min length is 8")
+    @Size(min = 8,max = 20,message = "Min length - 8")
     private String newPassword1;
 
-    @Size(min = 8,max = 20,message = "Min length is 8")
+    @Size(min = 8,max = 20,message = "Min length - 8")
     private String newPassword2;
 
     public String getCurrentPassword() {

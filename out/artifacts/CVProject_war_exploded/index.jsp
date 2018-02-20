@@ -13,8 +13,7 @@
                    onclick="window.location.href='${pageContext.servletContext.contextPath}/login'">
             <input class="mainPageButtons" type="button" value="Registration"
                    onclick="window.location.href='${pageContext.servletContext.contextPath}/registration'">
-            <input class="mainPageButtons" value="About" type="button"
-                   onclick="window.location.href='${pageContext.servletContext.contextPath}/about'">
+
         </form>
     </div>
 </div>
